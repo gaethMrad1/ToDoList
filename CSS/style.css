@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: url("../wallpapersden.com_small-memory_1920x1080.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.heading {
+  display: block;
+  font-size: 70px;
+  position: absolute;
+  top: 0px;
+  border-bottom: 3px solid crimson;
+}
+.heading:not(sub) {
+  text-shadow: 0 0 5px black;
+}
+.heading sub {
+  color: crimson;
+  text-shadow: 0 0 5px crimson;
+  margin: 0 10px;
+  font-size: 50px;
+}
+.continer {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow-y: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+  -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+@media (max-width: 576px) {
+  .continer {
+    width: 100%;
+  }
+}
+.continer .addTask {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.continer .addTask input {
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 18px;
+  background-color: #f5f3f3;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 7px 7px 10px rgba(0,0,0,0.1),
+  inset -7px -7px 10px rgba(0,0,0,0.2);
+}
+.continer .addTask i {
+  position: absolute;
+  right: 20px;
+  font-size: 35px;
+  color: red;
+  cursor: pointer;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+.continer .addTask i:hover {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+.result {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.result .task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: snow;
+  font-size: 20px;
+  border-radius: 50px;
+  box-shadow: inset 7px 7px 10px rgba(0,0,0,0.1),
+  inset -7px -7px 10px rgba(0,0,0,0.2);
+}
+.result .task i {
+  font-size: 25px;
+  cursor: pointer;
+  color: red;
+}
